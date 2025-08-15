@@ -1,0 +1,20 @@
+---
+- name: Ensure useful packages are present
+  hosts: localhost
+  gather_facts: true
+  become: true
+
+  vars:
+    pkg_list:
+      - htop
+
+  tasks:
+    - name: Update apt cache (once per hour)
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install packages
+      ansible.builtin.apt:
+        name: "{{ pkg_list }}"
+        state: present
