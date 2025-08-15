@@ -7,6 +7,7 @@
   vars:
     pkg_list:
       - htop
+      - curl
 
   tasks:
     - name: Update apt cache (once per hour)
