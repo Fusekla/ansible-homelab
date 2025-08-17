@@ -1,5 +1,5 @@
 ---
-- name: Hello World on localhost
+- name: Ping on localhost
   hosts: localhost
   gather_facts: false
   become: false
