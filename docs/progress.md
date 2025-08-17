@@ -1,3 +1,5 @@
 ### 2025-08-17
-- Initialized repository
 - Added `ping.yml` playbook
+
+### 2025-08-15
+- Initialized repository
