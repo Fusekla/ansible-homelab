@@ -25,7 +25,16 @@ This repository is used for refreshing skills (EX294 renewal prep) and testing A
 
 Example with the basic ping play:
 ```bash
-ansible-playbook -i inventories/localhost playbooks/ping.yml
+ansible-playbook -i inventories/localhost/hosts.ini playbooks/ping.yml
+[WARNING]: Found both group and host with same name: localhost
+
+PLAY [Hello World on localhost] **************************************************************************************************************************************************************
+
+TASK [Ping check] ****************************************************************************************************************************************************************************
+ok: [localhost]
+
+PLAY RECAP ***********************************************************************************************************************************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 See docs/ for more detailed progress logs.
